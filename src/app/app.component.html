@@ -1,0 +1,28 @@
+<mat-toolbar class="toolbarStyle">
+    <div>
+        <button class="homeIcon">
+            <p class="logo">C</p><p class="logo">R</p>
+            <!-- <img src="../assets/CRLogo.png" class="hvr-grow-shadow"> -->
+        </button>
+    </div>
+    
+    <div>
+        <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(0)"><h1>About</h1></button>
+        <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(1)"><h1>Experience</h1></button>
+        <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(2)"><h1>Projects</h1></button>
+        <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(3)"><h1>Contact</h1></button>
+    </div>
+    <div class="homeIcon">
+        <button  mat-button>
+            <img src="">
+        </button>
+    </div>
+</mat-toolbar>
+<body>
+    <app-about #about></app-about>
+    <app-experience #exp></app-experience>
+    <app-projects #proj></app-projects>
+    <app-contact #contact></app-contact>
+</body>
+
+
