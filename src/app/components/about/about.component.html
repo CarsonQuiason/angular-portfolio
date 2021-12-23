@@ -1,14 +1,6 @@
 <div class="aboutContent bg" [ngStyle]="{'background-image': 'url(../assets/background.png)'}">
     <div class="container">
-        <div class="box">
-            <div class="wrapper">
-                <img src="../assets/wave.gif">
-                <div class="typing-anim">
-                  <span><b>Hello</b>, my name is Carson Rottinghaus.</span>
-                </div>
-            </div>
-        </div>
-        
-        <p>I'm currently a 4th year student studying Computer Science at the University of Missouri-Columbia</p>
+        <div #greeting class="greeting"><img src="../assets/wave.gif"><b>Hello</b>, my name is Carson Rottinghaus.</div>
+        <p #body>I'm currently a 4th year student studying Computer Science at the University of Missouri-Columbia</p>
     </div>
 </div>

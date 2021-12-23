@@ -9,72 +9,33 @@
   background-size: cover;
 }
 
-.typing-anim {
-    width: 100%;
-    height: 100%;
-    animation: blink .5s step-end infinite alternate;
-    overflow: hidden;
-    border-right: 2px solid;
-    font-family: monospace;
-    font-size: 500%;
-    text-align: center;
-  }
-
 p {
     color: white;
     align-self: center;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
 }
-
-span {
-  color: white;
-  vertical-align: middle;
-  align-self: center;
-  height: inherit;
-}
-.wrapper {
-    display: flex;
-    width: 100%;
-    height: 30%;
-}
-
-.box {
-    width: 100%;
-    height: 100%;
-    animation: type 5s cubic-bezier(0.16, 1, 0.3, 1);
-    animation-fill-mode: forwards;
-}
-
-@keyframes blink {
-    0%{
-      border-color: white;
-    }
-    50% {
-      border-color: transparent
-    }
-  }
-  @keyframes type {
-    0% {
-      width: 0px;
-    }
-    50% {
-      width: 0px;
-      height: 40%;
-    }
-    100% {
-      width: 40%;
-      height: 30%;
-    }
-  }
 img {
-    max-width: 7vw;
-    max-height: 7vh;
+    width: 100px;
+    height: 100px;
 }
 .container {
     flex-direction: column;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.greeting {
+  height: 5em;
+  overflow: hidden;
+  color: white;
+  font-size: 5em;
+  white-space: nowrap;
+  display: inline;
+  text-align: center;
+  align-content: center;
+  vertical-align : middle;
 }

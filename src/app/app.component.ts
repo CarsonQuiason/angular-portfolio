@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollToPlugin);
 })
 
 
-export class AppComponent implements AfterViewInit{
+export class AppComponent {
   title = 'Portfolio';
   @ViewChild('about', { read: ElementRef }) aboutComp: ElementRef;
   @ViewChild('exp', { read: ElementRef }) expComp: ElementRef;
@@ -25,9 +25,6 @@ export class AppComponent implements AfterViewInit{
 
   ngOnInit(){
     
-  }
-
-  ngAfterViewInit(): void {
   }
 
   scrollToComponent(state: Number){

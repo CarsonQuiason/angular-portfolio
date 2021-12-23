@@ -1,9 +1,9 @@
 <mat-toolbar class="toolbarStyle">
     <div>
-        <button class="homeIcon" (click)="scrollToComponent(0)">
+        <a class="homeIcon" (click)="scrollToComponent(0)">
             <!-- <p class="logo">C</p><p class="logo">R</p> -->
             <img src="../assets/CRLogo.png" class="hvr-grow-shadow">
-        </button>
+        </a>
     </div>
     
     <div>
@@ -19,7 +19,7 @@
     </div>
 </mat-toolbar>
 <body>
-    <app-about #about></app-about>
+    <app-about #about></app-about>    
     <app-experience #exp></app-experience>
     <app-projects #proj></app-projects>
     <app-contact #contact></app-contact>

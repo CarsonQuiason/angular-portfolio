@@ -16,7 +16,7 @@ h1, h2, p {
 }
 
 .title{
-    padding-top: 10vh;
+    padding-top: 20vh;
     text-align: center;
     font-family: 'Montserrat';
     font-size: 4em;
@@ -32,12 +32,12 @@ h1, h2, p {
 //CARD CSS
 .cardContainer{
     width: inherit;
-    height: 75%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    background-color: #00000027;
 }
 
 .container{
@@ -54,7 +54,7 @@ h1, h2, p {
 
 .container .card .face{
     width: 300px;
-    height: 200px;
+    height: 20vh;
     transition: 0.5s;
 }
 
