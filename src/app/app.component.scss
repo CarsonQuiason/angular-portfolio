@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 html,body
 {
     width: 100%;
@@ -6,10 +7,6 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
 }
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Kumar+One');
-
 
 /* Underline Reveal */
 .hvr-underline-reveal {
@@ -63,8 +60,6 @@ h1{
   font-family: 'Montserrat';
   font-size: 20px;
 }
-
-
 
 .hvr-grow-shadow {
     display: inline-block;
