@@ -1,6 +1,10 @@
 .aboutContent{
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-content: center;
+    vertical-align: center;
+    display: flex;
 }
 
 .bg{
@@ -11,6 +15,7 @@
 
 p {
     color: white;
+    text-align: center;
     align-self: center;
     font-family: 'Montserrat';
     font-size: 1.5em;
@@ -20,16 +25,19 @@ img {
     height: 100px;
 }
 .container {
+    margin-top: 2%;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
     width: 100%;
-    height: 100%;
+    height: 75%;
+    background-color: #0000004b;
 }
 
 .greeting {
-  height: 5em;
+  height: 2em;
   overflow: hidden;
   color: white;
   font-size: 5em;
@@ -38,4 +46,5 @@ img {
   text-align: center;
   align-content: center;
   vertical-align : middle;
+  font-family: 'Montserrat';
 }

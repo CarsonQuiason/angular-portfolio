@@ -21,16 +21,17 @@ export class AboutComponent implements OnInit {
   }
 
   initAnimations(): void{
-    gsap.from(this.bodyText.nativeElement, {
-      delay: 3,
+    gsap.from(this.bodyText.nativeElement.childNodes, {
+      delay: 4,
       duration: 0.4,
       opacity: 0,
       y: -20,
+      stagger: 1.3
     });
 
     gsap.fromTo(this.greetingSpan.nativeElement, 
       {width: 100},
-      {width: 1300, delay: 1, duration: 2}
+      {width: 1450, delay: 1.5, duration: 2.5}
       );
   }
 
