@@ -1,9 +1,7 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-
-gsap.registerPlugin(ScrollToPlugin);
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 @Component({
@@ -13,21 +11,28 @@ gsap.registerPlugin(ScrollToPlugin);
 })
 
 
-export class AppComponent {
+export class AppComponent{
   title = 'Portfolio';
   @ViewChild('about', { read: ElementRef }) aboutComp: ElementRef;
   @ViewChild('exp', { read: ElementRef }) expComp: ElementRef;
   @ViewChild('proj', { read: ElementRef }) projComp: ElementRef;
   @ViewChild('contact', { read: ElementRef }) contactComp: ElementRef;
-  constructor() {
-    
+  constructor() {}
+
+  async refresh(){
+    ScrollTrigger.refresh();
   }
 
   ngOnInit(){
-    
   }
 
-  scrollToComponent(state: Number){
+  
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+  async scrollToComponent(state: Number){
     switch(state){
       case 0:
         this.aboutComp.nativeElement.scrollIntoView({behavior: "smooth"})
@@ -44,7 +49,6 @@ export class AppComponent {
     }
     
   }
-
 }
 
 

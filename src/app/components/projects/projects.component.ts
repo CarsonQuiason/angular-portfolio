@@ -1,13 +1,14 @@
 import { animate } from '@angular/animations';
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, OnChanges, Input, AfterViewInit } from '@angular/core';
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
   cardHolder: ElementRef<HTMLDivElement>[];
   @ViewChild('chatapp', { static: true }) chatapp: ElementRef<HTMLDivElement>;
   @ViewChild('manager', { static: true }) manager: ElementRef<HTMLDivElement>;
@@ -15,39 +16,32 @@ export class ProjectsComponent implements OnInit {
   @ViewChild('archive', { static: true }) archive: ElementRef<HTMLDivElement>;
   @ViewChild('cardContainer', { static: true }) cardContainer: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title: ElementRef<HTMLHeadElement>;
-
+  @Input() prop: number = 0;
   constructor() { }
 
   ngOnInit(): void {
-    //this.cardHolder.push(this.chatapp, this.manager, this.bball, this.archive);
-    //this.animateCards(this.cardHolder);
+    ScrollTrigger.refresh();
     this.initAnimations();
   }
 
   initAnimations(): void{
     gsap.from(this.cardContainer.nativeElement.childNodes, {
-        delay: 0.1,
+        scrollTrigger: {
+          trigger: this.cardContainer.nativeElement,
+          toggleActions: "restart none none none",
+          markers: true,
+        },
         duration: 0.6,
         opacity: 0,
         y: -20,
         stagger: 0.3,
     });
-    gsap.from(this.title.nativeElement, {
-      duration: 1,
-      opacity: 0,
-      y: -20
-  });
+    // gsap.from(this.title.nativeElement, {
+    //   delay: 0.1,
+    //   scrollTrigger: this.title.nativeElement,
+    //   duration: 1,
+    //   opacity: 0,
+    //   y: -20
+    // });
   }
-
-  // animateCards(cardHolder: ElementRef[]){
-  //   cardHolder.forEach(card => {
-  //     gsap.from(card.nativeElement, {
-  //       delay: 3,
-  //       duration: 0.4,
-  //       opacity: 0,
-  //       y: -20,
-  //     });
-  //   });
-  // }
-
 }

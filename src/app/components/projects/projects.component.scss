@@ -1,5 +1,3 @@
-
-
 .projectContent{
     width: 100%;
     height: 100%;
@@ -16,7 +14,7 @@ h1, h2, p {
 }
 
 .title{
-    padding-top: 20vh;
+    padding-top: 200px;
     text-align: center;
     font-family: 'Montserrat';
     font-size: 4em;
@@ -32,7 +30,7 @@ h1, h2, p {
 //CARD CSS
 .cardContainer{
     width: inherit;
-    height: 50%;
+    height: 75%;    
     display: flex;
     justify-content: center;
     align-items: center;
