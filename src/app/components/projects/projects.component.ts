@@ -28,7 +28,7 @@ export class ProjectsComponent {
     gsap.from(this.cardContainer.nativeElement.childNodes, {
         scrollTrigger: {
           trigger: this.cardContainer.nativeElement,
-          toggleActions: "restart none none none",
+          toggleActions: "restart restart restart restart",
           markers: true,
         },
         duration: 0.6,

@@ -15,38 +15,45 @@ export class AboutComponent implements AfterViewInit, OnInit {
   @ViewChild('greeting', { static: true }) greetingSpan: ElementRef<HTMLSpanElement>;
   @ViewChild('wave', { static: true }) wave: ElementRef<HTMLImageElement>;
   @ViewChild('hello', { static: true }) hello: ElementRef<HTMLElement>;
+  @ViewChild('container', { static: true }) aboutContainer: ElementRef<HTMLDivElement>;
 
-  timeline = gsap.timeline({});
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    ScrollTrigger.refresh();
-    this.initAnimations();    
+    
+    this.initAnimations();
   }
+
   ngAfterViewInit() {
-    ScrollTrigger.refresh();
  }
   
 
   initAnimations(): void{
-    ScrollTrigger.refresh();
-    this.timeline.from(this.wave.nativeElement, {
+    let timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".container",
+        toggleActions: "restart restart restart restart",
+        markers: true
+      }
+    });
+    timeline.from(this.wave.nativeElement, {
       duration: 1,
       opacity: 0,
       y: 200,
     });
 
-    this.timeline.fromTo(this.greetingSpan.nativeElement,
-      {width: 100},
+    timeline.fromTo(this.greetingSpan.nativeElement, {
+      width: 100 },
       {width: 280, duration: 1, delay: .5}
     );
 
-    this.timeline.to(this.greetingSpan.nativeElement, {
+    timeline.to(this.greetingSpan.nativeElement, {
       width: 1450, duration: 2.2, delay: .5
     });
 
-    this.timeline.from(this.bodyText.nativeElement.childNodes, {
+    timeline.from(this.bodyText.nativeElement.childNodes, {
       delay: .5,
       duration: 0.4,
       opacity: 0,

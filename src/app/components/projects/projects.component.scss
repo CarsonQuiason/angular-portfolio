@@ -14,7 +14,7 @@ h1, h2, p {
 }
 
 .title{
-    padding-top: 200px;
+    padding-top: 6%;
     text-align: center;
     font-family: 'Montserrat';
     font-size: 4em;
@@ -144,4 +144,8 @@ h1, h2, p {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  mat-icon{
+      font-size: 5em;
   }

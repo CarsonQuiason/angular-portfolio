@@ -1,11 +1,13 @@
 <div class="projectContent bg" [ngStyle]="{'background-image': 'url(../assets/background3.png)'}">
     <h1 class="title" #title>PROJECTS</h1>
     <div class="cardContainer" #cardContainer>
+
+        <!-- ChatApp -->
         <div class="container" #chatapp>
             <div class="card">
                 <div class="face face1">
                     <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}" class="cardIcon">
+                        <mat-icon [ngStyle]="{'color':'white'}">
                             message
                         </mat-icon>
                         <h3>Chat App</h3>
@@ -20,12 +22,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Task Manager -->
         <div class="container" #manager>
             <div class="card">
                 <div class="face face1">
                     <div class="content">
                         <mat-icon [ngStyle]="{'color':'white'}">
-                            message
+                            list
                         </mat-icon>
                         <h3>Task Manager</h3>
                     </div>
@@ -39,12 +43,14 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Basketball -->
         <div class="container" #bball>
             <div class="card">
                 <div class="face face1">
                     <div class="content">
                         <mat-icon [ngStyle]="{'color':'white'}">
-                            message
+                            sports_basketball
                         </mat-icon>
                         <h3>Prototype Basketball Game</h3>
                     </div>
@@ -58,12 +64,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Portfolio -->
         <div class="container" #portfolio>
             <div class="card">
                 <div class="face face1">
                     <div class="content">
                         <mat-icon [ngStyle]="{'color':'white'}">
-                            message
+                            web
                         </mat-icon>
                         <h3>My Portfolio Website</h3>
                     </div>
@@ -71,30 +79,32 @@
                 <div class="face face2">
                     <div class="content">
                         <p>The webpage you're on right now! (Pretty meta, I know.) Built in Angular and GSAP</p>
-                            <a href="#">Source Code</a>
+                            <a href="https://github.com/CarsonQuiason/angular-portfolio">Source Code</a>
                             <a href="#">You're on the Live Demo</a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Archive -->
         <div class="container" #archive>
             <div class="card">
                 <div class="face face1">
                     <div class="content">
                         <mat-icon [ngStyle]="{'color':'white'}">
-                            message
+                            archive
                         </mat-icon>
                         <h3>The Archives</h3>
                     </div>
                 </div>
                 <div class="face face2">
                     <div class="content">
-                        <p>Filled with all of my previous projects that are filled with spaghetti code. Not good enough to show off but they provide a showcase of my learning</p>
+                        <p>Filled with all of my previous projects that contain a massive amount of spaghetti code. Not good enough to put on my fridge, but they provide a showcase of my learning</p>
                             <a href="#">Enter if you dare</a>
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 </div>
 
 

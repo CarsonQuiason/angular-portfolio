@@ -1,7 +1,7 @@
 # Angular-Portfolio
 My personal portfolio webpage. Made with Angular, GSAP, and Angular Material
 
-## Dependencies
+## Installations
 ### Angular Material
 > ng add @angular/material
 ### GSAP
