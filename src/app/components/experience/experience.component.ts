@@ -19,8 +19,9 @@ export class ExperienceComponent implements OnInit {
   }
 
   initAnimations(){
+
     gsap.to(this.section.nativeElement, {
-      backgroundPosition: '0% 10%',
+      backgroundPosition: '0% 1%', 
       ease: "none",
       scrollTrigger: {
         trigger: this.section.nativeElement,

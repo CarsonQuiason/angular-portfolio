@@ -1,11 +1,9 @@
-.projectContent{
+section{
     width: 100%;
     height: 100%;
-}
-
-.bg{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 100%;
 }
 
 h1, h2, p {
@@ -40,7 +38,7 @@ h1, h2, p {
 }
 
 .container{
-    width: 20%;
+    width: 15%;
     position: relative;
     display: flex;
     justify-content: center;

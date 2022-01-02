@@ -19,7 +19,6 @@ export class AboutComponent implements AfterViewInit, OnInit {
   @ViewChild('hello', { static: true }) hello: ElementRef<HTMLElement>;
   @ViewChild('container', { static: true }) aboutContainer: ElementRef<HTMLDivElement>;
   @ViewChild('section', { static: true }) section: ElementRef<HTMLDivElement>;
-  backgroundPos;
 
   constructor() { }
 
@@ -41,15 +40,15 @@ export class AboutComponent implements AfterViewInit, OnInit {
         trigger: this.section.nativeElement,
         start: "top top", 
         end: "bottom top",
-        scrub: true
+        scrub: true,
+        markers: true
       }
     });
 
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".container",
-        toggleActions: "restart restart restart restart",
-        markers: true
+        toggleActions: "restart restart restart restart"
       }
     });
     timeline.from(this.wave.nativeElement, {
