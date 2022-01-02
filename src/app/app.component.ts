@@ -1,8 +1,4 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 
 @Component({
   selector: 'app-root',
@@ -19,17 +15,7 @@ export class AppComponent{
   @ViewChild('contact', { read: ElementRef }) contactComp: ElementRef;
   constructor() {}
 
-  async refresh(){
-    ScrollTrigger.refresh();
-  }
-
   ngOnInit(){
-  }
-
-  
-
-  delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
   }
 
   async scrollToComponent(state: Number){
