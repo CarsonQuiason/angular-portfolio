@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { CSSPlugin } from 'gsap/CSSPlugin';
+
+gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
 
 @Component({
@@ -16,21 +18,33 @@ export class AboutComponent implements AfterViewInit, OnInit {
   @ViewChild('wave', { static: true }) wave: ElementRef<HTMLImageElement>;
   @ViewChild('hello', { static: true }) hello: ElementRef<HTMLElement>;
   @ViewChild('container', { static: true }) aboutContainer: ElementRef<HTMLDivElement>;
-
-  
+  @ViewChild('section', { static: true }) section: ElementRef<HTMLDivElement>;
+  backgroundPos;
 
   constructor() { }
 
   ngOnInit(): void {
-    
     this.initAnimations();
   }
 
   ngAfterViewInit() {
+    
  }
   
 
   initAnimations(): void{
+
+    gsap.to(this.section.nativeElement, {
+      backgroundPosition: '0% 25%',
+      ease: "none",
+      scrollTrigger: {
+        trigger: this.section.nativeElement,
+        start: "top top", 
+        end: "bottom top",
+        scrub: true
+      }
+    });
+
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".container",
