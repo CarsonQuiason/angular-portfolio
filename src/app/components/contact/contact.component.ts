@@ -19,20 +19,7 @@ export class ContactComponent implements OnInit {
     this.initAnimations();
   }
 
-  async initAnimations(){
-
-    let desiredHeight;
-    let img = new Image(); 
-
-    img.src = "../assets/backgroundTest.png";
-    img.onload = function (event) {
-        
-      let  loadedImage = event.currentTarget as HTMLImageElement;
-      desiredHeight = loadedImage.height;
-      desiredHeight = desiredHeight/2;
-      console.log(desiredHeight);
-   }
-
+  initAnimations(){
     gsap.to(this.section.nativeElement, {
       backgroundPosition: '50% 25%',
       ease: "none",
@@ -43,19 +30,4 @@ export class ContactComponent implements OnInit {
       }
     });
   }
-
-  getImageHeight(url){
-    let height;
-    let img = new Image(); 
-
-    img.src = url;
-    img.onload = function (event) {
-        
-      let  loadedImage = event.currentTarget as HTMLImageElement;
-      height = loadedImage.height;
-      console.log(height);
-   }
-   return height;
-  }
-
 }

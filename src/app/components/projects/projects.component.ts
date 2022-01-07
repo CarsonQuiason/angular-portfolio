@@ -24,8 +24,6 @@ export class ProjectsComponent implements OnInit{
   }
 
   initAnimations(): void{
-    
-
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: this.section.nativeElement,
@@ -33,13 +31,17 @@ export class ProjectsComponent implements OnInit{
       },
       markers: true
     });
-
-
-      // timeline.from(this.cardContainer.nativeElement.childNodes, {
-      //   y: -20,
-      //   opacity: 0,
-      //   stagger: 0.3
-      // });
+  
+    timeline.from(this.cardContainer.nativeElement.childNodes, {
+      delay: .2,
+      opacity: 0,
+      height: .1,
+      stagger: .4
+    }).from(this.title.nativeElement , {
+      duration: 1.5,
+      opacity: 0,
+      y: -50,
+    },0);
   }
 
   initParallaxSroll(){
