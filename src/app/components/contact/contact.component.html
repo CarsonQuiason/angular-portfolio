@@ -1,24 +1,24 @@
 <section [ngStyle]="{'background-image': 'url(../assets/4.png)'}" #section>
-    <h1 class="title">Interested in my work?</h1>
+    <h1 class="title" #title>Interested in my work?</h1>
     <br><br>
-    <h2>Feel free to follow, connect, or contact me on any of these platforms</h2>
+    <h2 #body>Feel free to follow, connect, or contact me on any of these platforms</h2>
     <div class="centered">
-        <div class="platforms">
-            <a mat-fab>
+        <div class="platforms" #platforms>
+            <a mat-fab color="primary" href="https://github.com/CarsonQuiason"> 
                 <img src="../assets/socialLogos/github.png">
                 <p class="iconText">GitHub</p>
             </a>
-            <a mat-fab>
+            <a mat-fab color="primary" href="https://www.linkedin.com/in/carson-rottinghaus-399706210/"> 
                 <img src="../assets/socialLogos/linkedin.png">
                 <p class="iconText2">LinkedIn</p>
             </a>
-            <a mat-fab>
+            <a mat-fab color="primary">
                 <img src="../assets/socialLogos/gmail.png">
                 <p class="iconText">Gmail</p>
             </a>
         </div>
     </div>
-    <div class="feedbackContainer">
+    <div class="feedbackContainer" #feedback>
         <h1 class="title">Or maybe you have some criticism?</h1>
         <br>
         <h2>Please leave feedback as I am always looking to evolve my work</h2>
