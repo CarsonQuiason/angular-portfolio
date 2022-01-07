@@ -1,4 +1,3 @@
-import { animate } from '@angular/animations';
 import { Component, OnInit, ElementRef, ViewChild, OnChanges, Input, AfterViewInit } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,41 +19,38 @@ export class ProjectsComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
+    this.initParallaxSroll();
     this.initAnimations();
   }
 
   initAnimations(): void{
-
-
-    gsap.to(this.section.nativeElement, {
-      backgroundPosition: '0% 1%',
-      ease: "none",
-      scrollTrigger: {
-        trigger: this.section.nativeElement,
-        scrub: true
-      }
-    });
+    
 
     let timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: this.cardContainer.nativeElement,
+        trigger: this.section.nativeElement,
         toggleActions: "restart restart restart restart",
+      },
+      markers: true
+    });
+
+
+      // timeline.from(this.cardContainer.nativeElement.childNodes, {
+      //   y: -20,
+      //   opacity: 0,
+      //   stagger: 0.3
+      // });
+  }
+
+  initParallaxSroll(){
+    gsap.to(this.section.nativeElement, {
+      backgroundPosition: '50% 25%',
+      ease: "none",
+      scrollTrigger: {
+        trigger: this.section.nativeElement,
+        scrub: true,
+        end: "bottom top"
       }
-    });
-
-    timeline.from(this.title.nativeElement, {
-      duration: .5,
-      opacity: 0,
-      y: -70
-    });
-
-
-    timeline.from(this.cardContainer.nativeElement.childNodes, {
-        duration: 0.4,
-        opacity: 0,
-        y: -20,
-        x: -50,
-        stagger: 0.3,
     });
   }
 

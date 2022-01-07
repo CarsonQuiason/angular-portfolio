@@ -41,7 +41,6 @@ export class AboutComponent implements AfterViewInit, OnInit {
         start: "top top", 
         end: "bottom top",
         scrub: true,
-        markers: true
       }
     });
 

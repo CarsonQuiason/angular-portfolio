@@ -1,105 +1,110 @@
-<section class="projectContent bg" [ngStyle]="{'background-image': 'url(../assets/background3.png)'}" #section>
-    <h1 class="title" #title>PROJECTS</h1>
+<section class="projectContent bg" [ngStyle]="{'background-image': 'url(../assets/3.png)'}" #section>
+    <h1 class="title" #title>Projects</h1>
     <div class="cardContainer" #cardContainer>
-        ChatApp
-        <div class="container" #chatapp>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}">
-                            message
-                        </mat-icon>
-                        <h3>Chat App</h3>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>A real-time messaging application built with Angular and Firebase. Supports Google authentication, Google Maps API and Giphy API</p>
-                            <a href="#">Source Code</a>
-                            <a href="#">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Task Manager -->
-        <div class="container" #manager>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}">
-                            list
-                        </mat-icon>
-                        <h3>Task Manager</h3>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>A full-stack application for managing tasks (Similar to Trello). Buit in Angular and Firebase</p>
-                            <a href="#">Source Code</a>
-                            <a href="#">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Basketball -->
-        <div class="container" #bball>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}">
-                            sports_basketball
-                        </mat-icon>
-                        <h3>Prototype Basketball Game</h3>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>A 3D Basketball Video Game with Client and Server Relations.</p>
-                            <a href="#">Source Code</a>
-                            <a href="#">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio -->
-        <div class="container" #portfolio>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}">
-                            web
-                        </mat-icon>
-                        <h3>My Portfolio Website</h3>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>The webpage you're on right now! (Pretty meta, I know.) Built in Angular and GSAP</p>
-                            <a href="https://github.com/CarsonQuiason/angular-portfolio">Source Code</a>
-                            <a href="#">You're on the Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Archive -->
-        <div class="container" #archive>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <mat-icon [ngStyle]="{'color':'white'}">
-                            archive
-                        </mat-icon>
-                        <h3>The Archives</h3>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Filled with all of my previous projects that contain a massive amount of spaghetti code. Not good enough to put on my fridge, but they provide a showcase of my learning</p>
-                            <a href="#">Enter if you dare</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                Chat App
+                <mat-icon>
+                    message
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>A full stack, real-time messaging application with support for Google Authentication, Google Maps API, and Giphy API.</p>
+                <br>
+                <p>Built with: Angular, Firebase</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top">View Live</a>
+                <a mat-button class="hvr-bounce-to-top">View Source</a>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                Task Manager
+                <mat-icon>
+                    list
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>A full-stack application for managing tasks (Similar to Trello) with support for Google Authnetication</p>
+                <br>
+                <p>Built with: Angular, Firebase</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top" href="">View Live</a>
+                <a mat-button class="hvr-bounce-to-top" href="">View Source</a>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                Portfolio Webpage
+                <mat-icon>
+                    website
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>The webpage you're on right now! (Pretty meta, I know.) Deployed on my Ubuntu EC2 Instance.</p>
+                <br>
+                <p>Built with: Angular, GSAP, Firebase</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top">Currently Viewing</a>
+                <a mat-button class="hvr-bounce-to-top" href="https://github.com/CarsonQuiason/angular-portfolio">View Source</a>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                3D Basketball Game
+                <mat-icon>
+                    sports_basketball
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>A 3D Basketball Video Game with server sided projectile motion.</p>
+                <br>
+                <p>Built with: LUA, Roblox Studio</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top" href="">View Live</a>
+                <a mat-button class="hvr-bounce-to-top" href="">View Source</a>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                M.V.C. TicTacToe
+                <mat-icon>
+                    tag
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>A full stack real-time messaging application with support for Google Authentication, Google Maps API, and Giphy API.</p>
+                <br>
+                <p>Built with: JavaFX</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top" href="">View Source</a>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="hvr-grow-shadow">
+            <mat-card-title>
+                Archives
+                <mat-icon>
+                    archive
+                </mat-icon>
+            </mat-card-title>
+            <mat-card-content>
+                <p>Filled with all of my previous projects that contain a massive amount of spaghetti code. Not good enough to put on my fridge, but they provide a showcase of my learning</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button class="hvr-bounce-to-top">Enter If You Dare</a>
+            </mat-card-actions>
+        </mat-card>
+        
     </div>
 </section>
 

@@ -1,9 +1,14 @@
+* :not(mat-icon){
+    font-family: 'Montserrat';
+}
+
 section{
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100%;
+    background-position: 50% 100%;
+    display: block;
 }
 
 h1, h2, p {
@@ -28,123 +33,115 @@ h1, h2, p {
 
 //CARD CSS
 .cardContainer{
-    width: inherit;
+    flex-wrap: wrap;
+    width: 100%;
     height: 75%;    
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    background-color: #00000027;
 }
-
-.container{
-    width: 15%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.container .card{
-    position: relative;
-    cursor: pointer;
-}
-
-.container .card .face{
-    width: 300px;
-    height: 20vh;
-    transition: 0.5s;
-}
-
-.container .card .face.face1{
-    position: relative;
-    background: #212121;
-    display: flex;
-    justify-content: center;
+mat-icon{
+    font-size: 1em;
     align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
 }
 
-.container .card:hover .face.face1{
-    background: #9869af;
-    transform: translateY(0);
-}
-
-.container .card .face.face1 .content{
-    opacity: 0.8;
-    transition: 0.5s;
-}
-
-.container .card:hover .face.face1 .content{
-    opacity: 1;
-}
-
-.container .card .face.face1 .content img{
-    max-width: inherit;
-}
-
-.container .card .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.container .card .face.face2{
-    position: relative;
-    background: #212121;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
-}
-
-.container .card:hover .face.face2{
-    transform: translateY(0);
-}
-
-.container .card .face.face2 .content p{
-    margin: 0;
-    padding: 0;
-}
-
-.container .card .face.face2 .content a{
-    margin: 15px 0 0;
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
+mat-card{
+    border: 1px;
+    border-radius: 10px;
+    border-color: white;
+    background-color: #00000072;
     color: white;
-    padding: 5px;
-    border: 1px solid #212121;
+    width: 15%;
+    height: 20%;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-.container .card .face.face2 .content a:hover{
-    background: #212121;
-    color: #fff;
+mat-card-actions{
+    display: inline-block;
+
 }
 
+.cardTitle{
+    padding-top: 6%;
+    text-align: center;
+    font-size: 2em;
+}
 
+p{
+    vertical-align: center;
+    text-align: center;
+}
+mat-button{
+    width: 50%;
+}
+
+a{
+    background-color: #00000048;
+}
+
+/* Grow Shadow */
 .hvr-grow-shadow {
     display: inline-block;
     vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
   }
   .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 
-  mat-icon{
-      font-size: 5em;
+/* Bounce To Top */
+.hvr-bounce-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+  .hvr-bounce-to-top:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b833d3;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active{
+    color: white;
+  }
+  .hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   }

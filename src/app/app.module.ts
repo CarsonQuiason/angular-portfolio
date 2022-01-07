@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { gsap } from 'gsap/all';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { gsap } from 'gsap/all';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

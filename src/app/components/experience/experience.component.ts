@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from 'gsap/CSSPlugin';
+gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
 @Component({
   selector: 'app-experience',
@@ -21,11 +22,12 @@ export class ExperienceComponent implements OnInit {
   initAnimations(){
 
     gsap.to(this.section.nativeElement, {
-      backgroundPosition: '0% 1%', 
+      backgroundPosition: '50% 25%', 
       ease: "none",
       scrollTrigger: {
         trigger: this.section.nativeElement,
-        scrub: true
+        scrub: true,
+        end: "bottom top",
       }
     });
 
