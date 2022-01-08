@@ -40,7 +40,7 @@ export class AboutComponent implements AfterViewInit, OnInit {
         trigger: this.section.nativeElement,
         start: "top top", 
         end: "bottom top",
-        scrub: true,
+        scrub: true
       }
     });
 
@@ -58,11 +58,11 @@ export class AboutComponent implements AfterViewInit, OnInit {
 
     timeline.fromTo(this.greetingSpan.nativeElement, {
       width: 100 },
-      {width: 280, duration: 1, delay: .5}
+      {width: 280, duration: 1, delay: .5, ease: "power1.out"}
     );
 
     timeline.to(this.greetingSpan.nativeElement, {
-      width: 1450, duration: 2.2, delay: .5
+      width: 1450, duration: 2.2, delay: .5, ease: "power1.out"
     });
 
     timeline.from(this.bodyText.nativeElement.childNodes, {

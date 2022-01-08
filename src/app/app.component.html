@@ -1,11 +1,11 @@
 <mat-toolbar class="toolbarStyle">
-    <div>
+    <div #logo>
         <a class="homeIcon" (click)="scrollToComponent(0)">
             <!-- <p class="logo">C</p><p class="logo">R</p> -->
             <img src="../assets/CRLogo.png" class="hvr-grow-shadow">
         </a>
     </div>
-    <div>
+    <div #nav>
         <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(0)"><h1>About</h1></button>
         <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(1)"><h1>Experience</h1></button>
         <button mat-raised-button class="hvr-underline-reveal hvr-grow-shadow" (click)="scrollToComponent(2)"><h1>Projects</h1></button>

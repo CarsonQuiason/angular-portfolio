@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-
+import { gsap } from "gsap";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,12 +13,15 @@ export class AppComponent{
   @ViewChild('exp', { read: ElementRef }) expComp: ElementRef;
   @ViewChild('proj', { read: ElementRef }) projComp: ElementRef;
   @ViewChild('contact', { read: ElementRef }) contactComp: ElementRef;
+  @ViewChild('nav', { static: true }) nav: ElementRef<HTMLDivElement>;
+  @ViewChild('logo', { static: true }) logo: ElementRef<HTMLDivElement>;
   constructor() {}
 
   ngOnInit(){
+    this.initAnimations();
   }
 
-  async scrollToComponent(state: Number){
+  scrollToComponent(state: Number): void{
     switch(state){
       case 0:
         this.aboutComp.nativeElement.scrollIntoView({behavior: "smooth"})
@@ -32,8 +35,22 @@ export class AppComponent{
       case 3:
         this.contactComp.nativeElement.scrollIntoView({behavior: "smooth"})
         break;  
-    }
-    
+    } 
+  }
+
+  initAnimations(): void{
+    gsap.from(this.logo.nativeElement, {
+      opacity: 0,
+      duration: .6,
+      y: -15,
+      stagger: 0.2
+    });
+    gsap.from(this.nav.nativeElement.childNodes, {
+      opacity: 0,
+      duration: .6,
+      y: -15,
+      stagger: 0.2
+    });
   }
 }
 
