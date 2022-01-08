@@ -13,7 +13,7 @@ section{
 
 h1, h2, p {
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 4px 4px 10px black;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ h1, h2, p {
     font-size: 4em;
     font-weight: bold;
     font-family: 'Montserrat';
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 h2 {
@@ -38,7 +38,7 @@ h2 {
     height: 10%;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.193);
+    background-color: rgba(0, 0, 0, 0.446);
     margin-top: 1%;
     margin-bottom: 1%;
     border: solid rgba(0, 0, 0, 0.234);
@@ -58,7 +58,6 @@ img{
 }
 
 .iconText{
-    opacity: 0;
     transition: 0.3s;
 }
 
@@ -66,4 +65,23 @@ img{
     opacity: 1;
 }
 
+.footer{
+    margin-top: 7%;
+}
+
+.footerText {
+    font-size: 1.5em;
+}
+
+a:link{
+    color: white
+}
+
+a:visited{
+    color: white
+}
+
+a:hover{
+    color: blue;
+}
 
