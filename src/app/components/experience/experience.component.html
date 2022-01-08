@@ -1,74 +1,146 @@
 <section class="bg" [ngStyle]="{'background-image': 'url(../assets/2.png)'}" #section>
-    <h1 class="title">Experience</h1>
-    <div class="languages">
-        <h2>Languages</h2>
-        <div class="appContainer">
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/angular.png">
-                <p class="iconText">Angular</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/javafx.png">
-                <p class="iconText">JavaFX</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/javafx.png">
-                <p class="iconText">Unity3D</p>
-            </a>
-        </div>
-    </div>
-    <div class="frameworks">
-        <h2>Frameworks</h2>
-        <div class="appContainer">
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/angular.png">
-                <p class="iconText">Angular</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/javafx.png">
-                <p class="iconText">JavaFX</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/javafx.png">
-                <p class="iconText">Unity3D</p>
-            </a>
-        </div>
-    </div>
-    <div class="backend">
-        <h2>Back End</h2>
-        <div class="appContainer">
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
-                <p class="iconText">Firebase</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
+    <h1 class="title" #header>Experience</h1>
+    <div class="languages" #languages>
+        <h2 #t1>Languages</h2>
+        <div class="appContainer" #c1>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/typescript.png">
+                </a>
+                <p class="iconText">Typescript</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/javascript.png">
+                </a>
+                <p class="iconText">Javascript</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/python.png">
+                </a>
+                <p class="iconText">Python</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/java.png">
+                </a>
+                <p class="iconText">Java</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/c.png">
+                </a>
+                <p class="iconText">C</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/csharp.png">
+                </a>
+                <p class="iconText">C#</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/lua.png">
+                </a>
+                <p class="iconText">LUA</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/sql.png">
+                </a>
                 <p class="iconText">SQL</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/assembly.png">
+                </a>
+                <p class="iconText">Assembly</p>
+            </div>
+        </div>
+    </div>
+    <div class="frameworks" #framework>
+        <h2 #t2>Front End</h2>
+        <div class="appContainer" #c2>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/angular.png">
+                </a>
+                <p class="iconText">Angular</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/javafx.png">
+                </a>
+                <p class="iconText">JavaFX</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/unity.png">
+                </a>
+                <p class="iconText">Unity3D</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/gsap.png">
+                </a>
+                <p class="iconText">GSAP</p>
+            </div>
+        </div>
+    </div>
+    <div class="backend" #back>
+        <h2 #t3>Back End</h2>
+        <div class="appContainer" #c3>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/firebase.png">
+                </a>
+                <p class="iconText">Firebase</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/mysql.png">
+                </a>
+                <p class="iconText">MySQL</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/php.png">
+                </a>
                 <p class="iconText">PHP</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
-                <p class="iconText">MongoDB</p>
-            </a>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/phpmyadmin.png">
+                </a>
+                <p class="iconText">phpMyAdmin</p>
+            </div>
         </div>
     </div>
-    <div class="other">
-        <h2>Other Tools</h2>
-        <div class="appContainer">
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
-                <p class="iconText">Git</p>
-            </a>
-            <a mat-fab color="white" class="app">
-                <img src="../assets/experienceLogos/git.png">
+    <div class="other" #other>
+        <h2 #t4>Other Tools</h2>
+        <div class="appContainer" #c4>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/git.png">
+                </a>
+                <p class="iconText">GIT</p>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/aws.png">
+                </a>
                 <p class="iconText">AWS</p>
-            </a>
+            </div>
+            <div class="app">
+                <a mat-fab color="white" >
+                    <img src="../assets/experienceLogos/filezilla.png">
+                </a>
+                <p class="iconText">FileZilla</p>
+            </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer" #footer>
         <h2>Want to know more?</h2>
         <p>View my <a href="">Resume</a></p>
     </div>
