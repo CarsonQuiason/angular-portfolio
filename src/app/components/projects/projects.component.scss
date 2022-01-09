@@ -39,6 +39,9 @@ h1, h2, p {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media only screen and (max-width: 1080) {
+        zoom: 0.9;
+    }
 }
 mat-icon{
     font-size: 1em;
