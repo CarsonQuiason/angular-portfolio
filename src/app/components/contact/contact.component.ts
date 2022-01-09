@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from 'gsap/CSSPlugin';
+
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
 @Component({
@@ -48,7 +49,7 @@ export class ContactComponent implements OnInit {
       delay: 1,
       opacity: 0,
       x: -10,
-      stagger: 1
+      stagger: .3
     })
     
     

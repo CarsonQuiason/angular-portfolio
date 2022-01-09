@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { gsap } from 'gsap/all';
 import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

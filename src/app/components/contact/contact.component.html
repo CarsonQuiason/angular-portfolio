@@ -22,8 +22,23 @@
         <h1 class="title">Or maybe, you have some criticism?</h1>
         <br>
         <h2>Please leave feedback as I am always looking to evolve my work</h2>
-        <form>
-            <input>
+        <form class="form">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input type="name" matInput 
+                       placeholder="First Last">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Feedback</mat-label>
+                <textarea matInput placeholder="" rows="5"></textarea>
+            </mat-form-field>
+            <button mat-mini-fab color="primary" class="formBtn">
+                <mat-icon>
+                    ✔
+                </mat-icon>
+            </button>
         </form>
+
     </div>
 </section>
