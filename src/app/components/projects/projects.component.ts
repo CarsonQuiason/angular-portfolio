@@ -15,13 +15,15 @@ export class ProjectsComponent implements OnInit{
   @ViewChild('cardContainer', { static: true }) cardContainer: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title: ElementRef<HTMLHeadElement>;
   @ViewChild('section', { static: true }) section: ElementRef<HTMLDivElement>;
-
+  @ViewChild('warn', { static: true }) warn: ElementRef<HTMLParagraphElement>;
   constructor() { }
 
   ngOnInit(): void {
     this.initParallaxSroll();
     this.initAnimations();
+    this.initWarning();
   }
+  
 
   initAnimations(): void{
     let timeline = gsap.timeline({
@@ -35,7 +37,7 @@ export class ProjectsComponent implements OnInit{
     timeline.from(this.cardContainer.nativeElement.childNodes, {
       delay: .2,
       opacity: 0,
-      height: 0,
+      transform: "scale(0)",
       stagger: .4
     }).from(this.title.nativeElement , {
       duration: 1.5,
@@ -44,7 +46,7 @@ export class ProjectsComponent implements OnInit{
     },0);
   }
 
-  initParallaxSroll(){
+  initParallaxSroll(): void{
     gsap.to(this.section.nativeElement, {
       backgroundPosition: '50% 25%',
       ease: "none",
@@ -56,5 +58,19 @@ export class ProjectsComponent implements OnInit{
     });
   }
 
+  initWarning(): void{
+    let repeat = gsap.timeline({
+      scrollTrigger: this.section.nativeElement,
+      toggleActions: "restart restart restart restart"
+    })
+    repeat.to(this.warn.nativeElement, {
+      color: "#FFEA00",
+      duration: .6
+    }).to(this.warn.nativeElement, {
+      color: "black",
+      duration: .6
+    });
 
+    repeat.repeat(-1).yoyo(true);
+  }
 }

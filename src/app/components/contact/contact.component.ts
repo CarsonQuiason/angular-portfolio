@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
       delay: 1,
       opacity: 0,
       x: -10,
-      stagger: .3
+      stagger: .5
     })
     
     
