@@ -9,6 +9,7 @@ section{
     background-size: cover;
     background-position: 50% 100%;
     display: block;
+    overflow: hidden;
 }
 
 h1, h2, p {
@@ -51,11 +52,13 @@ mat-card{
     background-color: #00000072;
     color: white;
     width: 18%;
-    height: 23%;
+    height: 25%;
     text-align: center;
     margin-left: 3%;
     margin-right: 3%;
     overflow: hidden;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 mat-card-title{
@@ -72,7 +75,7 @@ mat-card-actions{
 
 p{
     text-align: center;
-    font-size: .7vw;
+    font-size: .6vw;
 }
 
 mat-button{
@@ -125,7 +128,7 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background: #b833d3;
+    background: #ffffff3d;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
