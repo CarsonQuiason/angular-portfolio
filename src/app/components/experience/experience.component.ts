@@ -39,8 +39,8 @@ export class ExperienceComponent implements OnInit {
     });
     timeline.from(this.header.nativeElement, {
       opacity: 0,
-      y: -20,
-      duration: 2
+      y: -50,
+      duration: 1.8
     }, 0).from(this.t1.nativeElement, {
       opacity: 0,
       x: -30,
