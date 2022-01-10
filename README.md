@@ -2,10 +2,13 @@
 My personal portfolio webpage. Made with Angular, GSAP, and Angular Material
 
 ## Installations
+### NPM
+`npm install`
 ### Angular Material
-> ng add @angular/material
+`ng add @angular/material`
 ### GSAP
-> npm install --save gsap @types/gsap
-
-## For Local Deployment
-> ng serve
+`npm install --save gsap @types/gsap`
+### Firebase
+`npm install firebase @angular/fire`
+## Local Deployment
+`ng serve`
