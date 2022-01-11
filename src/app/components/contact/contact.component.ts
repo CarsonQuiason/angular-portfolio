@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from 'gsap/CSSPlugin';
+import { FeedbackService } from 'src/app/services/feedback.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import Feedback from 'src/app/models/feedback.model';
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -16,13 +19,36 @@ export class ContactComponent implements OnInit {
   @ViewChild('platforms', { static: true }) platforms: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title: ElementRef<HTMLHeadElement>;
   @ViewChild('body', { static: true }) body: ElementRef<HTMLHeadElement>;
-  @ViewChild('feedback', { static: true }) feedback: ElementRef<HTMLHeadElement>;
+  @ViewChild('feedback', { static: true }) feedbackDiv: ElementRef<HTMLHeadElement>;
+  constructor(private feedbackService: FeedbackService, private formbuilder: FormBuilder) { }
 
-  constructor() { }
+  submitted: boolean;
+
+  feedBack: Feedback = {
+    name: '',
+    content: ''
+  };
+
+  feedBackForm = this.formbuilder.group({
+    name: ['',[Validators.required]],
+    content: ['',[Validators.required]]
+  });
+
 
   ngOnInit(): void {
     this.initParallaxScroll();
     this.initAnimations();
+  }
+
+  addFeedback(): void{
+    this.feedBack.name = this.feedBackForm.get('name')?.value;
+    this.feedBack.content = this.feedBackForm.get('content')?.value;
+    this.feedbackService.create(this.feedBack);
+    this.submitted = true;
+    this.feedBackForm.reset();
+    Object.keys(this.feedBackForm.controls).forEach(key => {
+      this.feedBackForm.get(key).setErrors(null);
+    });
   }
 
   initAnimations(): void{
@@ -45,16 +71,12 @@ export class ContactComponent implements OnInit {
       opacity: 0,
       y: -10,
       stagger: 0.4
-    }).from(this.feedback.nativeElement.childNodes, {
+    }).from(this.feedbackDiv.nativeElement.childNodes, {
       delay: 1,
       opacity: 0,
       x: -10,
       stagger: .5
-    })
-    
-    
-    ;
-
+    });
   }
 
   initParallaxScroll(): void{

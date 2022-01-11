@@ -14,6 +14,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { gsap } from 'gsap/all';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -22,21 +22,21 @@
         <h1 class="title">Or maybe, you have some criticism?</h1>
         <br>
         <h2>Please leave feedback as I am always looking to evolve my work</h2>
-        <form class="form">
+        <form class="form" [formGroup]="feedBackForm">
             <mat-form-field>
                 <mat-label>Name</mat-label>
-                <input type="name" matInput 
-                       placeholder="First Last">
+                <input matInput placeholder="First Last" formControlName="name">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Feedback</mat-label>
-                <textarea matInput placeholder="" rows="5"></textarea>
+                <textarea matInput placeholder="" formControlName="content"></textarea>
             </mat-form-field>
-            <button mat-mini-fab color="primary" class="formBtn">
-                    ✔
+            <button mat-mini-fab color="primary" class="formBtn" (click)="addFeedback()">
+                ✔
             </button>
-        </form>
 
+        </form>
     </div>
+    <p *ngIf="submitted">Thank you for your feedback!</p>
 </section>
