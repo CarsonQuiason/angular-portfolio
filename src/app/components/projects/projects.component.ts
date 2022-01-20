@@ -37,7 +37,6 @@ export class ProjectsComponent implements OnInit{
     timeline.from(this.cardContainer.nativeElement.childNodes, {
       delay: .2,
       opacity: 0,
-      transform: "scale(0)",
       stagger: .4
     }).from(this.title.nativeElement , {
       duration: 1.5,

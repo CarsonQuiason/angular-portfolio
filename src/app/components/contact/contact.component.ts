@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit {
   @ViewChild('title', { static: true }) title: ElementRef<HTMLHeadElement>;
   @ViewChild('body', { static: true }) body: ElementRef<HTMLHeadElement>;
   @ViewChild('feedback', { static: true }) feedbackDiv: ElementRef<HTMLHeadElement>;
+  @ViewChild('submitResponse', { static: true }) submitResponse: ElementRef<HTMLParagraphElement>;
   constructor(private feedbackService: FeedbackService, private formbuilder: FormBuilder) { }
 
   submitted: boolean;
@@ -76,6 +77,9 @@ export class ContactComponent implements OnInit {
       opacity: 0,
       x: -10,
       stagger: .5
+    }).from(this.submitResponse.nativeElement, {
+      opacity: 0,
+      x: -10
     });
   }
 

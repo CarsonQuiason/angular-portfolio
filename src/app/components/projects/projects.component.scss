@@ -31,8 +31,6 @@ h1, h2, p {
     width: 50%;
 }
 
-
-//CARD CSS
 .cardContainer{
     flex-wrap: wrap;
     width: 100%;
@@ -111,8 +109,8 @@ a{
   }
   .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
 /* Bounce To Top */

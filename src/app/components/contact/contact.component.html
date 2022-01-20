@@ -4,16 +4,16 @@
     <h2 #body>Feel free to follow, connect, or contact me on any of these platforms</h2>
     <div class="centered">
         <div class="platforms" #platforms>
-            <a mat-fab color="white" href="https://github.com/CarsonQuiason"> 
+            <a mat-fab color="white" href="https://github.com/CarsonQuiason" target="_blank">
                 <img src="../assets/socialLogos/github.png">
                 <p class="iconText">GitHub</p>
             </a>
-            <a mat-fab color="white" href="https://www.linkedin.com/in/carson-rottinghaus-399706210/"> 
+            <a mat-fab color="white" href="https://www.linkedin.com/in/carson-rottinghaus-399706210/" target="_blank"> 
                 <img src="../assets/socialLogos/linkedin.png">
                 <p class="iconText2">LinkedIn</p>
             </a>
             <a mat-fab color="white">
-                <img src="../assets/socialLogos/gmail.png">
+                <img src="../assets/socialLogos/gmail.png" target="_blank">
                 <p class="iconText">Gmail</p>
             </a>
         </div>
@@ -38,5 +38,5 @@
 
         </form>
     </div>
-    <p *ngIf="submitted">Thank you for your feedback!</p>
+    <p *ngIf="submitted" #submitResponse>Thank you for your feedback!</p>
 </section>
