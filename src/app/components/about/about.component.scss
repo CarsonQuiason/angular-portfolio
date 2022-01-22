@@ -12,6 +12,13 @@ section{
     overflow: hidden;
 }
 
+@media (-webkit-device-pixel-ratio: 1.25) {
+    *{
+      zoom: 0.95;
+    }
+  }
+
+
 p {
     color: white;
     text-align: center;

@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSPlugin } from 'gsap/CSSPlugin';
 import { FeedbackService } from 'src/app/services/feedback.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import Feedback from 'src/app/models/feedback.model';
+import gsapCore from 'gsap/gsap-core';
 
 gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
@@ -13,14 +14,14 @@ gsap.registerPlugin(ScrollTrigger, CSSPlugin);
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewInit {
 
   @ViewChild('section', { static: true }) section: ElementRef<HTMLDivElement>;
   @ViewChild('platforms', { static: true }) platforms: ElementRef<HTMLDivElement>;
   @ViewChild('title', { static: true }) title: ElementRef<HTMLHeadElement>;
   @ViewChild('body', { static: true }) body: ElementRef<HTMLHeadElement>;
+  @ViewChild('submitResponse', { static: true }) submitResponse: ElementRef<HTMLDivElement>;
   @ViewChild('feedback', { static: true }) feedbackDiv: ElementRef<HTMLHeadElement>;
-  @ViewChild('submitResponse', { static: true }) submitResponse: ElementRef<HTMLParagraphElement>;
   constructor(private feedbackService: FeedbackService, private formbuilder: FormBuilder) { }
 
   submitted: boolean;
@@ -37,8 +38,13 @@ export class ContactComponent implements OnInit {
 
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, CSSPlugin);
     this.initParallaxScroll();
     this.initAnimations();
+  }
+
+  ngAfterViewInit(){
+    ScrollTrigger.refresh();
   }
 
   addFeedback(): void{
@@ -47,6 +53,7 @@ export class ContactComponent implements OnInit {
     this.feedbackService.create(this.feedBack);
     this.submitted = true;
     this.feedBackForm.reset();
+    //Removes errors when form is reset
     Object.keys(this.feedBackForm.controls).forEach(key => {
       this.feedBackForm.get(key).setErrors(null);
     });
@@ -56,7 +63,7 @@ export class ContactComponent implements OnInit {
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: this.section.nativeElement,
-        toggleActions: "restart restart restart restart"
+        toggleActions: "restart restart restart restart",
       }
     });
 
@@ -77,10 +84,14 @@ export class ContactComponent implements OnInit {
       opacity: 0,
       x: -10,
       stagger: .5
-    }).from(this.submitResponse.nativeElement, {
-      opacity: 0,
-      x: -10
     });
+    if(this.submitted){
+      timeline.from(this.submitResponse.nativeElement, {
+        opacity: 0,
+        x: -10
+      });
+    }
+    
   }
 
   initParallaxScroll(): void{
