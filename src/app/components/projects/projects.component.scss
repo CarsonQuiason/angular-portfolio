@@ -79,8 +79,6 @@ mat-card-actions{
     display: inline-block;
 }
 
-
-
 p{
     text-align: center;
     font-size: .6vw;
@@ -160,5 +158,14 @@ a{
     transform: scaleY(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+
+  .archiveText{
+      margin: 0;
+      padding: 0;
+  }
+  .warn{
+      margin: 0;
+      padding: 0;
   }
 
