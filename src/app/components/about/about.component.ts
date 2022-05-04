@@ -34,7 +34,7 @@ export class AboutComponent implements AfterViewInit, OnInit {
   initAnimations(): void{
 
     gsap.to(this.section.nativeElement, {
-      backgroundPosition: '0% 25%',
+      backgroundPosition: '50% 0px',
       ease: "none",
       scrollTrigger: {
         trigger: this.section.nativeElement,

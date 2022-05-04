@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit{
 
   initParallaxSroll(): void{
     gsap.to(this.section.nativeElement, {
-      backgroundPosition: '50% 25%',
+      backgroundPosition: '50% 0px',
       ease: "none",
       scrollTrigger: {
         trigger: this.section.nativeElement,
