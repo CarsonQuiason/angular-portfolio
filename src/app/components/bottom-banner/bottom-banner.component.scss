@@ -1,0 +1,83 @@
+.banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #212121;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.warning-icon {
+  color: #ffc107;
+  position: absolute;
+  left: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.banner-message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.close-button {
+  color: white;
+  position: absolute;
+  right: 24px;
+  flex-shrink: 0;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    padding: 12px 16px;
+  }
+  
+  .warning-icon {
+    left: 16px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .banner-message {
+    font-size: 12px;
+  }
+  
+  .close-button {
+    right: 16px;
+  }
+}
+

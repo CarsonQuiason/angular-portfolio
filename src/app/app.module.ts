@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BottomBannerComponent } from './components/bottom-banner/bottom-banner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ExperienceComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    BottomBannerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+<div class="banner-container" *ngIf="isVisible">
+  <div class="banner-content">
+    <mat-icon class="warning-icon">warning</mat-icon>
+    <p class="banner-message">
+        Please note that this portfolio represents work up to 2022. A portfolio rework is currently in development. Thank you for your understanding!
+    </p>
+    <button mat-icon-button class="close-button" (click)="dismiss()" aria-label="Close banner">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>
