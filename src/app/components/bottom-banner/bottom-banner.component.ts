@@ -11,11 +11,11 @@ export class BottomBannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('portfolioBannerDismissed');
-    if (dismissed === 'true') {
-      this.isVisible = false;
-    }
+    // Uncomment if you want the banner dimissal to be persistent through browser refresh
+    // const dismissed = localStorage.getItem('portfolioBannerDismissed');
+    // if (dismissed === 'true') {
+    //   this.isVisible = false;
+    // }
   }
 
   dismiss(): void {
